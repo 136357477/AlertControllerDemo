@@ -57,9 +57,50 @@
 
 - (IBAction)actionSheetShow:(id)sender {
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"DefauleTitle" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"确定");
+    }]];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"cancelTitle" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消");
+    }]];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"DestructiveTitle" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"重置");
+    }]];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //        UITextField *login = alertControl.textFields[0];
+        //        UITextField *password = alertControl.textFields[1];
+        //        [self.view endEditing:YES];
+        //        NSLog(@"登录:%@  密码:%@ ",login.text ,password.text);
+    }]];
+    
+    
+    
+    [self presentViewController:alertControl animated:YES completion:nil];
+    
 }
 - (IBAction)customerTypeShow:(id)sender {
         UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"title" message:@"message" preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"DefauleTitle" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"确定");
+    }]];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"cancelTitle" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消");
+    }]];
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"DestructiveTitle" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"重置");
+    }]];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //        UITextField *login = alertControl.textFields[0];
+        //        UITextField *password = alertControl.textFields[1];
+        //        [self.view endEditing:YES];
+        //        NSLog(@"登录:%@  密码:%@ ",login.text ,password.text);
+    }]];
+    
+    
+    
+    [self presentViewController:alertControl animated:YES completion:nil];
     
 }
 
